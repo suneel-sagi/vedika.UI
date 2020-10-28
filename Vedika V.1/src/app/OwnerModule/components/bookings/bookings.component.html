@@ -1,0 +1,9 @@
+<app-book (featureSelected)="onNavigate($event)"></app-book>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-active *ngIf="loadedFeature === 'active'"></app-active>
+      <app-recentbookings *ngIf="loadedFeature !== 'active'"></app-recentbookings>
+    </div>
+  </div>
+</div>

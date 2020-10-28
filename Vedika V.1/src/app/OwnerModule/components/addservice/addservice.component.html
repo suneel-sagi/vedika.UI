@@ -1,0 +1,939 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="site-header-logo__link flex-item" itemprop="url" title="Vedikas" href="#"> <img alt="vedikas logo"
+                    class="site-header-logo__img Header-BG img-responsive" itemprop="logo"
+                    src="./assets/Images/logo/lasttttt.png" alt="Vedikas"
+                    style="margin-top: 0px; float: left; height: 55px; width: 80px;">
+            </a>
+        </div>
+
+ 
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown"
+                        style="margin-right: 20px; color: black; margin-top: 0px;" href="#"><i
+                            style="padding-right: 5px; color: #c94d05;" class="fa fa-user"></i><b>Login</b><span
+                            class="caret" style="color: black;"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a routerLink="/owner-login"> Owner Login</a></li>
+                        <li><a routerLink="/login">User Login</a></li>
+                    </ul>
+                </li>&nbsp;&nbsp;&nbsp;&nbsp;<li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown"
+                        style="margin-right: 20px; color: black; margin-top: 0px;" href="#"><i
+                            style="padding-right: 5px; color: #c94d05;" class="fa fa-question-circle"></i><b>Help</b>
+                        <span class="caret" style="color: black;"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a routerLink="/help">Owner Help</a></li>
+                        <li><a routerLink="/help">User Help</a></li>
+                    </ul>
+                </li>
+                <!-- <button class=" btn btn-warning" type="button" (click)="onclick()"
+                    style="margin-right: 20px; width: 180px; margin-top: 15px;"><b style="color: white;">List Your
+                        Venue</b></button> -->
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<section id="specials" class="specials">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Add Your <span>Services</span></h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea error laboriosam, doloribus consectetur
+                eligendi qui. Iste reiciendis porro vero maxime, dicta quo aliquam deleniti ut exercitationem alias
+                dignissimos quasi harum?</p>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-3 col-xs-12 col-sm-5 text-center">
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="nav-item active">`
+                        <a class="nav-link" data-toggle="pill" href="#tab-1">Photography</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#tab-2">Food Catering</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#tab-3">Decoration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#tab-4">MakeUp</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#tab-5">Mehindi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#tab-6">Sangeeth</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#tab-7">Dj night</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#tab-8">Grooms Aravial celebration</a>
+                    </li>
+                    <!-- <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#tab-9">Paris</a>
+            </li> -->
+                </ul>
+                <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+                    <hr>
+                </div>
+            </div>
+            <div class="col-md-9 col-xs-12 col-sm-7">
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="tab-1">
+
+                        <div class="row">
+                            <form [formGroup]="PhotographyForm">
+                                <div class="section-title">
+                                    <h2>Photography<span></span></h2>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <div class="form-group">
+                                            <input type="studioName" formControlName="studioName" class="form-control "
+                                                placeholder="Studio Name" required
+                                                [ngClass]="{'is-invalid':PhotographyForm.get('studioName').touched && PhotographyForm.get('studioName').invalid}" />
+                                            <div *ngIf="PhotographyForm.get('studioName').touched && PhotographyForm.get('studioName').invalid"
+                                                class="invalid-feedback">
+                                                <div *ngIf="PhotographyForm.get('studioName').errors.required"
+                                                    style="color: red;">
+                                                    Studio Name is required
+                                                </div>
+                                                <div *ngIf="PhotographyForm.get('studioName').hasError('pattern')"
+                                                    style="color: red;">
+                                                    Studio Name must be a valid Name.
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <div class="form-group">
+                                            <select class="form-control "  formControlName="typeofPhotography" required
+                                            [ngClass]="{'is-invalid':PhotographyForm.get('typeofPhotography').touched && PhotographyForm.get('typeofPhotography').invalid}" >
+                                                <option value="" disabled selected hidden>Type of Photography</option>
+                                            </select>
+                                            <div *ngIf="PhotographyForm.get('typeofPhotography').touched && PhotographyForm.get('typeofPhotography').invalid"
+                                                class="invalid-feedback">
+                                                <div *ngIf="PhotographyForm.get('typeofPhotography').errors.required"
+                                                    style="color: red;">
+                                                    Type of Photography is required
+                                                </div>
+                                                <div *ngIf="PhotographyForm.get('typeofPhotography').hasError('pattern')"
+                                                    style="color: red;">
+                                                    Type of Photography must be a valid Photography.
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <div class="form-group">
+                                             <input type="text" class="form-control " formControlName="others" placeholder="Others" required
+                                             [ngClass]="{'is-invalid':PhotographyForm.get('others').touched && PhotographyForm.get('others').invalid}" />
+                                             <div *ngIf="PhotographyForm.get('others').touched && PhotographyForm.get('others').invalid"
+                                                class="invalid-feedback">
+                                                <div *ngIf="PhotographyForm.get('others').errors.required"
+                                                    style="color: red;">
+                                                    Others is required
+                                                </div>
+                                                <div *ngIf="PhotographyForm.get('others').hasError('pattern')"
+                                                    style="color: red;">
+                                                    Others must be  valid .
+
+                                                </div>
+
+                                            </div>
+                                         </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <div class="form-group">
+
+                                                 <input type="text" class="form-control "  formControlName="vendorname" placeholder="Vendor Name"  required
+                                                 [ngClass]="{'is-invalid':PhotographyForm.get('vendorname').touched && PhotographyForm.get('vendorname').invalid}" />
+                                                 <div *ngIf="PhotographyForm.get('vendorname').touched && PhotographyForm.get('vendorname').invalid"
+                                                 class="invalid-feedback">
+                                                 <div *ngIf="PhotographyForm.get('vendorname').errors.required"
+                                                     style="color: red;">
+                                                     Vendor Name is required
+                                                 </div>
+                                                 <div *ngIf="PhotographyForm.get('vendorname').hasError('pattern')"
+                                                     style="color: red;">
+                                                     Vendor Name must be  valid .
+ 
+                                                 </div>
+ 
+                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <div class="form-group">
+
+                                        <input type="text" class="form-control " formControlName="mobileNumber" placeholder="Phone Number"  required
+                                        [ngClass]="{'is-invalid':PhotographyForm.get('mobileNumber').touched && PhotographyForm.get('mobileNumber').invalid}" />
+                                        <div *ngIf="PhotographyForm.get('mobileNumber').touched && PhotographyForm.get('mobileNumber').invalid"
+                                        class="invalid-feedback">
+                                        <div *ngIf="PhotographyForm.get('mobileNumber').errors.required"
+                                            style="color: red;">
+                                            Phone Number  is required
+                                        </div>
+                                        <div *ngIf="PhotographyForm.get('mobileNumber').hasError('pattern')"
+                                            style="color: red;">
+                                            Phone Number  must be  valid .
+
+                                        </div>
+
+                                      </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <div class="form-group">
+
+                                        <input type="email" class="form-control " formControlName="email"  placeholder="Email_Id" required
+                                        [ngClass]="{'is-invalid':PhotographyForm.get('email').touched && PhotographyForm.get('email').invalid}" />
+                                        <div *ngIf="PhotographyForm.get('email').touched && PhotographyForm.get('email').invalid"
+                                        class="invalid-feedback">
+                                        <div *ngIf="PhotographyForm.get('email').errors.required"
+                                            style="color: red;">
+                                            Email  is required
+                                        </div>
+                                        <div *ngIf="PhotographyForm.get('email').hasError('pattern')"
+                                            style="color: red;">
+                                            Email  must be  valid .
+
+                                        </div>
+
+                                      </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <div class="form-group">
+
+                                        <label for="Address"><b>Address:</b></label>
+                                        <textarea class="form-control " formControlName="address" rows="5"  required
+                                        [ngClass]="{'is-invalid':PhotographyForm.get('address').touched && PhotographyForm.get('address').invalid}"  ></textarea>
+                                        <div *ngIf="PhotographyForm.get('address').touched && PhotographyForm.get('address').invalid"
+                                        class="invalid-feedback">
+                                        <div *ngIf="PhotographyForm.get('address').errors.required"
+                                            style="color: red;">
+                                            address  is required
+                                        </div>
+                                        <div *ngIf="PhotographyForm.get('address').hasError('pattern')"
+                                            style="color: red;">
+                                            address  must be  valid .
+
+                                        </div>
+
+                                      </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <div class="form-group">
+
+                                        <select class="form-control"  formControlName="state" required
+                                        [ngClass]="{'is-invalid':PhotographyForm.get('state').touched && PhotographyForm.get('state').invalid}"  >
+                                            <option value="" disabled selected hidden >Select State</option>
+                                        </select>
+                                        <div *ngIf="PhotographyForm.get('state').touched && PhotographyForm.get('state').invalid"
+                                        class="invalid-feedback">
+                                        <div *ngIf="PhotographyForm.get('state').errors.required"
+                                            style="color: red;">
+                                            State  is required
+                                        </div>
+                                        <div *ngIf="PhotographyForm.get('state').hasError('pattern')"
+                                            style="color: red;">
+                                            State  must be  valid .
+
+                                        </div>
+
+                                      </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <div class="form-group">
+
+                                            <select class="form-control"  formControlName="city" required
+                                            [ngClass]="{'is-invalid':PhotographyForm.get('city').touched && PhotographyForm.get('city').invalid}"  >
+                                                <option value="" disabled selected hidden >Select City</option>
+                                            </select>
+                                            <div *ngIf="PhotographyForm.get('city').touched && PhotographyForm.get('city').invalid"
+                                            class="invalid-feedback">
+                                            <div *ngIf="PhotographyForm.get('city').errors.required"
+                                                style="color: red;">
+                                                City  is required
+                                            </div>
+                                            <div *ngIf="PhotographyForm.get('city').hasError('pattern')"
+                                                style="color: red;">
+                                                City  must be  valid .
+    
+                                            </div>
+    
+                                          </div>
+    
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <div class="form-group">
+
+                                        <input type="email" class="form-control " formControlName="zipcode"  placeholder="Zip Code" required
+                                        [ngClass]="{'is-invalid':PhotographyForm.get('zipcode').touched && PhotographyForm.get('zipcode').invalid}" />
+                                        <div *ngIf="PhotographyForm.get('zipcode').touched && PhotographyForm.get('zipcode').invalid"
+                                        class="invalid-feedback">
+                                        <div *ngIf="PhotographyForm.get('zipcode').errors.required"
+                                            style="color: red;">
+                                            Zip Code  is required
+                                        </div>
+                                        <div *ngIf="PhotographyForm.get('zipcode').hasError('pattern')"
+                                            style="color: red;">
+                                            Zip Code  must be  valid .
+
+                                        </div>
+
+                                      </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <button class="btn btn-warning btn-block form-group" [disabled]="!PhotographyForm.valid">Add Service</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-2">
+                        <div class="row">
+                            <form [formGroup]="FoodCateringForm">
+                                <div class="section-title">
+                                    <h2>Food Catering<span></span></h2>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group"
+                                            placeholder="Catering Service Name">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                    <label for="food" class="form-group">Type of food service that you Provide:</label>
+                                    <div class="checkbox form-group">
+                                        <label class="box"><input type="checkbox"> veg
+                                        </label>
+                                    </div>
+
+                                    <div class="checkbox form-group">
+                                        <label><input type="checkbox">Non-veg </label>
+
+                                    </div>
+                                    <div class="checkbox form-group ">
+                                        <label><input type="checkbox">South Indian</label>
+
+                                    </div>
+                                    <div class="checkbox form-group">
+                                        <label><input type="checkbox">North Indian</label>
+
+                                    </div>
+                                    <div class="checkbox form-group">
+                                        <label><input type="checkbox">Chinese </label>
+
+                                    </div>
+                                    <div class="checkbox form-group">
+                                        <label><input type="checkbox">Continential</label>
+
+                                    </div>
+                                    <div class="checkbox form-group">
+                                        <label><input type="checkbox">Europien</label>
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Vendor Name">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Phone Number">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Email_Id">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <label for="Address">Address:</label>
+                                        <textarea class="form-control form-group" rows="5"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <select class="form-control form-group">
+                                            <option selected disabled>Select State</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <select class="form-control form-group">
+                                            <option selected disabled>Select city</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Zipcode">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <button class="btn btn-warning btn-block form-group">Add Service</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                            <br>
+                            <br>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-3">
+                        <div class="row">
+                            <form>
+                                <div class="section-title">
+                                    <h2>Decoration<span></span></h2>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Shop Name">
+                                    </div>
+                                </div>
+                                <!-- <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <select class="form-control form-group">
+                                            <option selected disabled>Type of Photography</option>
+                                        </select>
+                                    </div>
+                                </div> -->
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Vendor Name">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Phone Number">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Email_Id">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <label for="Address" class="form-group"><b>Address:</b></label>
+                                        <textarea class="form-control form-group" rows="5"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <select class="form-control form-group">
+                                            <option selected disabled>Select State</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <select class="form-control form-group">
+                                            <option selected disabled>Select city</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Zipcode">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <button class="btn btn-warning btn-block form-group">Add Service</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-4">
+                        <div class="row">
+                            <form>
+                                <div class="section-title">
+                                    <h2>MakeUp<span></span></h2>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Parlour Name">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <select class="form-control form-group">
+                                            <option selected disabled>Type of Service</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Others">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Vendor Name">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Phone Number">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Email_Id">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <label for="Address" class="form-group"><b>Address:</b></label>
+                                        <textarea class="form-control form-group" rows="5"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <select class="form-control form-group">
+                                            <option selected disabled>Select State</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <select class="form-control form-group">
+                                            <option selected disabled>Select city</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Zipcode">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <button class="btn btn-warning btn-block form-group">Add Service</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-5">
+                        <div class="row">
+                            <form>
+                                <div class="section-title">
+                                    <h2>Mehindi<span></span></h2>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Shop Name">
+                                    </div>
+                                </div>
+                                <!-- <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <select class="form-control form-group">
+                                            <option selected disabled>Type of Photography</option>
+                                        </select>
+                                    </div>
+                                </div> -->
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Vendor Name">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Phone Number">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Email_Id">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <label for="Address" class="form-group"><b>Address:</b></label>
+                                        <textarea class="form-control form-group" rows="5"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <select class="form-control form-group">
+                                            <option selected disabled>Select State</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <select class="form-control form-group">
+                                            <option selected disabled>Select city</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Zipcode">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <button class="btn btn-warning btn-block form-group">Add Service</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-6">
+                        <div class="row">
+                            <form>
+                                <div class="section-title">
+                                    <h2>Sangeeth<span></span></h2>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group"
+                                            placeholder="Oraganizing Shop Name">
+                                    </div>
+                                </div>
+                                <!-- <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <select class="form-control form-group">
+                                            <option selected disabled>Type of Photography</option>
+                                        </select>
+                                    </div>
+                                </div> -->
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Vendor Name">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Phone Number">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Email_Id">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <label for="Address" class="form-group"><b>Address:</b></label>
+                                        <textarea class="form-control form-group" rows="5"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <select class="form-control form-group">
+                                            <option selected disabled>Select State</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <select class="form-control form-group">
+                                            <option selected disabled>Select city</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Zipcode">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <button class="btn btn-warning btn-block form-group">Add Service</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-7">
+                        <div class="row">
+                            <form>
+                                <div class="section-title">
+                                    <h2>Dj Night<span></span></h2>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group"
+                                            placeholder="Oraganizing Team Name">
+                                    </div>
+                                </div>
+                                <!-- <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <select class="form-control form-group">
+                                            <option selected disabled>Type of Photography</option>
+                                        </select>
+                                    </div>
+                                </div> -->
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Vendor Name">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Phone Number">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Email_Id">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <label for="Address" class="form-group"><b>Address:</b></label>
+                                        <textarea class="form-control form-group" rows="5"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <select class="form-control form-group">
+                                            <option selected disabled>Select State</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <select class="form-control form-group">
+                                            <option selected disabled>Select city</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Zipcode">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <button class="btn btn-warning btn-block form-group">Add Service</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-8">
+                        <div class="row">
+                            <form>
+                                <div class="section-title">
+                                    <h2>Groom Arraival celebration<span></span></h2>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group"
+                                            placeholder="Oraganizing Name">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <select class="form-control form-group">
+                                            <option selected disabled>Type of Photography</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Vendor Name">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Phone Number">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Email_Id">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <label for="Address" class="form-group"><b>Address:</b></label>
+                                        <textarea class="form-control form-group" rows="5"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <select class="form-control form-group">
+                                            <option selected disabled>Select State</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <select class="form-control form-group">
+                                            <option selected disabled>Select city</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Zipcode">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <button class="btn btn-warning btn-block form-group">Add Service</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-9">
+                        <div class="row">
+                            <form>
+                                <div class="section-title">
+                                    <h2>Photography<span></span></h2>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Studio Name">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <select class="form-control form-group">
+                                            <option selected disabled>Type of Photography</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Vendor Name">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Phone Number">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Email_Id">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <label for="Address" class="form-group"><b>Address:</b></label>
+                                        <textarea class="form-control form-group" rows="5"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <select class="form-control form-group">
+                                            <option selected disabled>Select State</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <select class="form-control form-group">
+                                            <option selected disabled>Select city</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <input type="text" class="form-control form-group" placeholder="Zipcode">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <button class="btn btn-warning btn-block form-group">Add Service</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

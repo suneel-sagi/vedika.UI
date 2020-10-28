@@ -1,0 +1,20 @@
+.main{
+    background-image: url(../../assets/Images/coming3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.card{
+    width: 280px;
+    margin-left: 1020px;
+    padding-top: 40px;
+}
+ button{
+    margin-left: 100px;
+    border-radius: 20px;
+ }
+/* button{
+    margin-left: 950px;
+    margin-top: 450px;
+} */

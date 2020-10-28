@@ -1,0 +1,79 @@
+<nav class="navbar navbar-white bg-white" style="height:50px;">
+    <a class="navbar-brand" href="#">
+        <img src="../../../../assets/Images/Vedikas-logo.png" alt="Vedikas" style="width: 140px;">
+    </a>
+</nav>
+
+<section >
+    <div class="login-form">
+        <div class="panel-heading">
+            <h3 style="color: rgb(29, 39, 39);"><b>My Profile</b></h3>
+          </div>
+        <form #postForm="ngForm" >
+           
+
+            <div class="form-group">
+                <label for="usd"> <b>User Id</b> </label><br>
+                <input type="text" [disabled]="true" name="usd" placeholder="Enter user id" [(ngModel)]="data.user_Id"
+                    class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="fname"> <b>First Name</b> </label><br>
+                <input type="text" name="fname" [disabled]="toggleButton" placeholder="Enter first name" [(ngModel)]="data.firstName"
+                    class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="lname"> <b>Last Name</b> </label><br>
+                <input type="text" name="lname" [disabled]="toggleButton" placeholder="Enter last name" [(ngModel)]="data.lastName"
+                    class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="mnumber"> <b>Mobile Number</b> </label><br>
+                <input type="text" name="mnumber" [disabled]="toggleButton" placeholder="Enter mobile number" [(ngModel)]="data.mobileNumber"
+                    class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="email"> <b>Email</b> </label><br>
+                <input type="text" name="email" [disabled]="toggleButton" placeholder="Enter emai" [(ngModel)]="data.email" class="form-control">
+            </div>
+
+            <br>
+            <div style="padding-bottom: 3%;">
+
+                <button type="submit" class="btn btn-outline" (click)="back()">
+                    Back
+                </button>
+                &nbsp;
+                <button type="button" (click)="enable()" class="btn btn-warning ">
+                    Edit
+                </button>
+              
+                
+                
+                <button type="submit" (click)="onsave()" (click)="disable()"  data-toggle="modal" data-target="#myModal"  class="btn btn-warning pull-right ">Save
+                </button>
+                <div id="myModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-sm">
+                  
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Is profile Updated..?</h4>
+                        </div>
+                        <div class="modal-body">
+                          <p *ngIf="msg" class="pull-right">{{msg}}<p> 
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                  
+                    </div>
+                  </div>
+            </div>
+           
+        </form>
+    </div>
+</section>

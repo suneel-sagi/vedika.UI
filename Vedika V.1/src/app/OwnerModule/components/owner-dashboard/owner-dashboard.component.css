@@ -1,0 +1,68 @@
+.main{
+  background-color:  rgb(248, 249, 250);
+  height: 90vh;
+}
+
+.card{
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 34, 51, 0.1);
+  box-shadow: 2px 4px 10px 0 rgba(0, 34, 51, 0.05), 2px 4px 10px 0 rgba(0, 34, 51, 0.05);
+  border-radius: 0.15rem;
+  width: 350px;
+  height: 100px;
+}
+
+.card:link {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.card:hover {
+  width: 350px;
+  height: 100px;
+  background-color: #8c8484;
+}
+
+.title {
+  margin-left: 18px;
+}
+
+.sub-title {
+  margin-left: 18px;
+}
+.navbar-brand.navbar-image {
+  padding: 0 20px 0 0;
+  display: flex;
+}
+.navbar-brand.navbar-image>img {
+  margin: auto 0;
+  z-index: 1;
+  height: initial;
+}
+.navbar-header{
+  padding-right: 200px;
+} 
+ 
+/* @media (min-width: 768px) {
+   .navbar.taller .navbar-nav>li>a {
+       padding-top: 25px;
+       padding-bottom: 25px;
+   }
+}  */
+.navbar-nav{
+  padding-left: 900px;
+  margin-top: 10px;
+  font-size: 30px;
+  color: blue;
+}
+/* .dropdown-toggle{
+  padding-left: 900px;
+  margin-top: 10px;
+  font-size: 30px;
+  color: blue;
+} */
+.dropdown-menu{
+  padding-right: 100px;
+  
+}

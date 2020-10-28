@@ -1,0 +1,132 @@
+.container{
+  position: relative;
+}
+.navbar{
+  margin-bottom: 0px;
+}
+/* ============================background-img========================== */
+.hero-img{
+  width: 100%; 
+  height: 400px; 
+  position: absolute;
+  /* opacity: 0.7; */
+  background: white;
+}
+.background-img{
+  height: 400px;
+}
+/* =========================headline======================== */
+.HeadLine__text{
+  letter-spacing: 2px;
+}
+h1{
+  font-family: "Satisfy", sans-serif;
+  font-weight: 800;
+  font-size: 42px;
+  color:white; 
+}
+ h1 span{
+  font-family: "Satisfy", sans-serif;
+  color: white;
+}
+/* ===============================Form-control, Form-group, Button============================================== */
+.form-control{
+  height: 54px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  box-shadow: 5px 5px 5px 5px rgba(19, 16, 16, 0.219);
+}
+.form-group {
+  margin-bottom: 10px;
+}
+.btn-warning{
+  height: 54px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  box-shadow: 5px 5px 5px 5px rgba(19, 16, 16, 0.219);
+  border-radius: 50px;
+  font-size: 20px;
+}
+/* =============================================================================
+==========================media queries=======================================
+============================================================================= */
+@media only screen and (max-width: 500px) {
+  .container {
+    /* background-color: lightblue; */
+    margin-left: 7%;
+    position: relative;
+  }
+  .form-control{
+    box-shadow: 0px 0px 0px 0px rgba(19, 16, 16, 0.219);
+    border: 1px solid rgba(15, 1, 1, 0.664);
+    height: 34px;
+  }
+  h1{
+    font-weight: 500;
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .container {
+    /* background-color: lightblue; */
+    margin-left: 7%;    
+  }
+  .form-control{
+    height: 44px;
+  }
+  h1{
+    font-weight: 500;
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .container {
+    margin-left: 7%;  
+  }
+  .form-control{
+    height: 44px;
+  }
+  h1{
+    font-weight: 500;
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 200px) {
+  h1{
+    visibility: hidden;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .container {
+    /* background-color: lightblue; */
+    margin-left: 7%;
+  }
+  .form-control{
+    height: 44px;
+  }
+  h1{
+    font-weight: 500;
+    font-size: 25px;
+    overflow: hidden;
+  }
+}
+.form-control:focus {
+  border-color: #cc5510de;
+}
+/* =================================list your venue button====================================== */
+.btn-primary{
+  border-radius: 50px;
+  color: #cc5510de;
+  background-color: #fff;
+  margin-top: 2.5%;
+  font-weight: 600;
+  width: 150px;
+  border:  2px solid #c94d05;
+}
+.btn-primary:hover{
+  background-color: #c94d05;
+  border-color: #cc5510de;
+  color: black;
+}
+/* ======================================================panel================================================ */
+/* .panel{
+  border: 2px solid rgba(0, 0, 0, 0.774);
+} */

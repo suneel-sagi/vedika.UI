@@ -1,0 +1,32 @@
+<section class="main">
+  <img src="../../assets/Images/Add_a_heading-removebg-preview (1).png" alt="Vedikas" style="width: 200px;">
+  <div class="card">
+    <form [formGroup]="myForm">
+      <div class="form-group">
+        <input type="email" class="form-control form-control-lg" formControlName="email" placeholder="Email"
+        [ngClass]="{'is-invalid':myForm.get('email').touched && myForm.get('email').invalid}"/>
+        <div *ngIf="myForm.get('email').touched && myForm.get('email').invalid" class="invalid-feedback">
+          <div *ngIf="myForm.get('email').errors.required" style="color: red;">
+            Email is required
+          </div>
+          <div *ngIf="myForm.get('email').errors.email">
+            Email must be a valid
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control form-control-lg" formControlName="password" placeholder="Password"
+        [ngClass]="{'is-invalid':myForm.get('password').touched && myForm.get('password').invalid}"/>
+        <div *ngIf="myForm.get('password').touched && myForm.get('password').invalid" class="invalid-feedback">
+          <div *ngIf="myForm.get('password').errors.required" style="color: red;">
+            Password is required
+          </div>
+          <div *ngIf="myForm.get('password').errors.password">
+            Password must be a valid
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-success" [disabled]="myForm.invalid" (click)="onSubmit()"><b>Submit</b></button>
+    </form>
+  </div>
+</section>

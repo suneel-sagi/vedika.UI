@@ -1,0 +1,38 @@
+
+h2 {text-align: center; 
+}
+.b{
+  margin-left:30%;
+}
+
+
+.container { 
+    margin-left:5%;
+
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 220%;
+  }
+
+  td, th {
+    /* border: 3px solid #556dad; */
+    text-align: center;
+    padding: 8px;
+    vertical-align: inherit;
+    font-weight: bold;
+  }
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  /* input .month{
+    padding: 0 60px;
+    color: #556dad;
+  } */
+  #chart {
+    max-width: 650px;
+    margin: 35px auto;
+  }
+  

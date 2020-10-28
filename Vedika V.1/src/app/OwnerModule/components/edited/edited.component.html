@@ -1,0 +1,1132 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="site-header-logo__link flex-item" itemprop="url" title="Vedikas" href="#"> <img alt="vedikas logo"
+                    class="site-header-logo__img Header-BG img-responsive" itemprop="logo"
+                    src="./assets/Images/logo/lasttttt.png" alt="Vedikas"
+                    style="margin-top: 0px; float: left; height: 55px; width: 80px;">
+            </a>
+        </div>
+     
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown"
+                        style="margin-right: 20px; color: black; margin-top: 0px;" href="#"><i
+                            style="padding-right: 5px; color: #c94d05;" class="fa fa-user"></i><b>Login</b><span
+                            class="caret" style="color: black;"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a routerLink="/owner-login"> Owner Login</a></li>
+                        <li><a routerLink="/login">User Login</a></li>
+                    </ul>
+                </li> -->
+                <!-- &nbsp;&nbsp;&nbsp;&nbsp; -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown"
+                        style="margin-right: 20px; color: black; margin-top: 0px;" href="#">
+                        <i style="padding-right: 5px; color: #c94d05;" class="fa fa-question-circle">
+                        </i><b>Help</b>
+                    </a>
+                    <!-- <ul class="dropdown-menu">
+                        <li><a routerLink="/help">Owner Help</a></li>
+                        <li><a routerLink="/help">User Help</a></li>
+                    </ul> -->
+                </li>
+                <!-- <button class=" btn btn-warning" type="button" (click)="onclick()"
+                    style="margin-right: 20px; width: 180px; margin-top: 15px;"><b style="color: white;">List Your
+                        Venue</b></button> -->
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<div class="section-title">
+
+    <h2>Add Your <span>FunctionHall</span> </h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea error laboriosam, doloribus consectetur eligendi qui.
+        Iste reiciendis porro vero maxime, dicta quo aliquam deleniti ut exercitationem alias dignissimos quasi harum?
+    </p>
+</div>
+<hr>
+<!-- <div class="progress">
+    <div class="progress-bar progress-bar-warning"  data-toggle="tab" href="#tab-1" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+      60% Complete (warning)
+    </div>
+  </div>
+  <div class="progress">
+    <div class="progress-bar progress-bar-warning"  data-toggle="tab" href="#tab-2" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:20%">
+      60% Complete (warning)
+    </div>
+  </div> -->
+<section id="specials" class="specials">
+    <div class="container">
+
+
+
+        <div class="row">
+            <div class="col-md-3 col-xs-12 col-sm-5 text-center">
+                <ul class="nav nav-tabs nav-stacked">
+                    <li class="nav-item active">`
+                        <a class="nav-link" data-toggle="tab" href="#tab-1" style="font-weight: 700;">Welcome</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#tab-2">Location</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#tab-3">Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#tab-4">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#tab-5">Security</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#tab-6">Payment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#tab-7">Publish</a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+            <div class="col-md-9 col-xs-12 col-sm-7">
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="tab-1">
+                        <div class="row">
+                            <form>
+                                <!-- <div class="progress">
+                                    <div class="progress-bar progress-bar-warning" data-toggle="tab" href="#tab-1"
+                                        role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                        style="width:0%">
+                                        <span class="sr-only">70% Complete</span>
+                                    </div>
+                                </div> -->
+                                <div class="section-title">
+                                    <h2>Welcome to <span>Vedikas</span></h2>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <h3>Welcome! Verify the location of your service</h3>
+                                        <p>Just 6 steps remaining</p><br>
+                                        <hr>
+                                        <button href="#tab-2" data-toggle="pill" type="button"
+                                            class="btn btn-warning">Continue</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="tab-2">
+                        <div class="row">
+                            <form [formGroup]="LocationForm" ngSubmit="Locationonclick()">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-warning" data-toggle="tab" href="#tab-1"
+                                        role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                        style="width:20%">
+                                        <span class="sr-only">70% Complete</span>
+                                    </div>
+                                </div>
+                                <div class="section-title">
+                                    <h2>Location<span></span></h2>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                            <label for="name">Country<span style="color: red;"> *</span></label>
+                                        
+                                            <select class="form-control" name="India" formControlName="name" (change)="getStates($event.target.name)"
+                                            [ngClass]="{'is-invalid':LocationForm.get('name').touched && LocationForm.get('name').invalid}">
+                                                <!-- <option selected disabled>Select Country</option> -->
+                                                <option>India</option>
+                                            </select>
+                                            <div *ngIf="LocationForm.get('name').touched && LocationForm.get('name').invalid" class="invalid-feedback">
+                                                <div *ngIf="LocationForm.get('name').errors.required" style="color: red;">Country is required
+                                                </div>
+                                                <div *ngIf="LocationForm.get('name').errors.name">Country must be a valid
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                            <label for="state">State<span style="color: red;"> *</span></label>
+                                            <select class="form-control" formControlName="state" id="state" [ngClass]="{'is-invalid':LocationForm.get('state').touched && LocationForm.get('state').invalid}"  
+                                            (change)="getCities($event.target.value)">
+                                                <option selected disabled>Select State</option>
+                                                <option *ngFor="let data of stateInfo ">{{data.name}} </option>
+                                            </select>
+                                            <div *ngIf="LocationForm.get('state').touched && LocationForm.get('state').invalid" class="invalid-feedback" style="color: red;">
+                                                State Name is requried
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+
+                                            <label for="name">City<span style="color: red;"> *</span></label>
+
+                                            <select class="form-control" name="city" formControlName="city" id="city" [ngClass]="{'is-invalid':LocationForm.get('city').touched && LocationForm.get('city').invalid}">
+                                                <!-- <option selected disabled>Select City</option> -->
+                                                <option *ngFor="let data of cityInfo ">{{data}} </option>
+                                            </select>
+
+                                            <div *ngIf="LocationForm.get('city').touched && LocationForm.get('city').invalid" style="color: red;">
+                                                City Name is invalid
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                               
+                                
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                            <label for="streetAddress">Street Address<span style="color: red;"> *</span></label>
+                                            
+                                           <input type="text"class="form-control" formControlName="streetAddress" id="streetAddress" [ngClass]="{'is-invalid':LocationForm.get('streetAddress').touched && LocationForm.get('streetAddress').invalid}" placeholder="Street Address">
+                                           <div *ngIf="LocationForm.get('streetAddress').touched &&            LocationForm.get('streetAddress').invalid" style="color: red;">
+                                            Street Address is requried
+                                           </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                            <label for="name">Zip Code<span style="color: red;"> *</span></label>
+                                            
+                                           <input type="text" class="form-control" formControlName="zipcode" id="zipcode" [ngClass]="{'is-invalid':LocationForm.get('zipcode').touched && LocationForm.get('zipcode').invalid}" placeholder="Zip Code">
+                                           <div *ngIf="LocationForm.get('zipcode').touched &&            LocationForm.get('zipcode').invalid" style="color: red;">
+                                            Zipcode id requried
+                                           </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <hr>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <button class="btn btn-default" data-toggle="tab" href="#tab-1">Back</button>
+                                        <button class="btn btn-warning pull-right" data-toggle="tab" href="#tab-3" [disabled]="LocationForm.invalid" (click)="Locationonclick()">Next</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                            <br>
+                            <br>
+
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="tab-3">
+                        <div class="row">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-warning" data-toggle="tab" href="#tab-1"
+                                    role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                                    style="width:40%">
+                                    <span class="sr-only">70% Complete</span>
+                                </div>
+                            </div>
+                            <div class="section-title">
+                                <h2>Details<span></span></h2>
+                            </div>
+                            <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+
+                                <form [formGroup]="DetailsForm" (ngSubmit)="Detailsonclick()">
+                                    <div class="form-row">
+            
+                                        <div class="form-group">
+                                            <label for="name">Function Hall Name<span class="required">*</span></label>
+                                            <input type="text" name="name" class="form-control"
+                                                formControlName="name"
+                                                [ngClass]="{'is-invalid':DetailsForm.get('name').touched && DetailsForm.get('name').invalid}" />
+                                            <div *ngIf="DetailsForm.get('name').touched && DetailsForm.get('name').invalid"
+                                                class="invalid-feedback">
+                                                <div *ngIf="DetailsForm.get('name').errors.required">Function Hall Name is
+                                                    required</div>
+                                                <div *ngIf="DetailsForm.get('name').errors.name">Function Hall Name
+                                                    must be a
+                                                    valid</div>
+                                            </div>
+                                        </div>
+            
+                                        <div class="form-group">
+                                            <label for="functionhalldescription">Function Hall Descrption<span
+                                                    class="required">*</span></label>
+            
+                                            <textarea type="text" name="functionhalldescription" class="form-control" rows="8"
+                                                formControlName="functionhalldescription" style="height: 100px;"
+                                                [ngClass]="{'is-invalid':DetailsForm.get('functionhalldescription').touched && DetailsForm.get('functionhalldescription').invalid}">
+                                            </textarea>
+                                            <div *ngIf="DetailsForm.get('functionhalldescription').touched && DetailsForm.get('functionhalldescription').invalid"
+                                                class="invalid-feedback">
+                                                <div *ngIf="DetailsForm.get('functionhalldescription').errors.required">Descrption
+                                                    is
+                                                    required</div>
+                                                <div
+                                                    *ngIf="DetailsForm.get('functionhalldescription').errors.functionhalldescription">
+                                                    Descrption
+                                                    must be a
+                                                    valid</div>
+                                            </div>
+                                        </div>
+            
+                                        <div class="form-group">
+                                            <label for="functionhalltype">Function Hall Type<span class="required">*</span></label>
+            
+                                            <select id="functionhalltype" class="form-control" formControlName="functionhalltype"
+                                                name="functionhalltype"
+                                                [ngClass]="{'is-invalid':DetailsForm.get('functionhalltype').touched && DetailsForm.get('functionhalltype').invalid}">
+                                                <option value="" disabled selected hidden>Select Hall Type</option>
+                                                <option>AC</option>
+                                                <option>Non-AC</option>
+                                            </select>
+                                            <div *ngIf="DetailsForm.get('functionhalltype').touched && DetailsForm.get('functionhalltype').invalid"
+                                                class="invalid-feedback">
+                                                <div *ngIf="DetailsForm.get('functionhalltype').errors.required">Function Hall Type
+                                                    is required</div>
+                                                <div *ngIf="DetailsForm.get('functionhalltype').errors.functionhalltype">
+                                                    functionhalltype must be a valid functionhalltype
+                                                </div>
+                                            </div>
+                                        </div>
+            
+                                        <div class="form-group">
+                                            <label for="briderooms">Bride (or) Bridegroom Room<span
+                                                    class="required">*</span></label>
+                                            <select id="briderooms" class="form-control" formControlName="briderooms"
+                                                name="briderooms"
+                                                [ngClass]="{'is-invalid':DetailsForm.get('briderooms').touched && DetailsForm.get('briderooms').invalid}">
+                                                <option value="" disabled selected hidden>Select Room </option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                                <option>8</option>
+                                                <option>9</option>
+                                                <option>10</option>
+                                            </select>
+                                            <div *ngIf="DetailsForm.get('briderooms').touched && DetailsForm.get('briderooms').invalid"
+                                                class="invalid-feedback">
+                                                <div *ngIf="DetailsForm.get('briderooms').errors.required">
+                                                    Bride or Bridegroom Room
+                                                    is required</div>
+                                                <div *ngIf="DetailsForm.get('briderooms').errors.briderooms">
+                                                    Bride or Bridegroom Room must be a valid Bride or Bridegroom Room
+                                                </div>
+                                            </div>
+                                        </div>
+            
+                                        <div class="form-group">
+                                            <label for="maximumguest">Maximum Guest<span class="required">*</span></label>
+            
+            
+                                            <select class="form-control" type="number" name="maximumguest"
+                                                formControlName="maximumguest"
+                                                [ngClass]="{'is-invalid':DetailsForm.get('maximumguest').touched && DetailsForm.get('maximumguest').invalid}">
+            
+                                                <option value="" disabled selected hidden>Select Guest Capacity</option>
+                                                <option>1000</option>
+                                                <option>1500</option>
+                                                <option>2000</option>
+                                                <option>2500</option>
+                                                <option>3000</option>
+                                                <option>3500</option>
+                                                <option>4000</option>
+                                                <option>4500</option>
+                                            </select>
+                                            <div *ngIf="DetailsForm.get('maximumguest').touched && DetailsForm.get('maximumguest').invalid"
+                                                class="invalid-feedback">
+                                                <div *ngIf="DetailsForm.get('maximumguest').errors.required">Maximum Guest is
+                                                    required
+                                                </div>
+                                                <div *ngIf="DetailsForm.get('maximumguest').errors.maximumguest">maximumguest must
+                                                    be a valid
+                                                </div>
+                                            </div>
+                                        </div>
+            
+                                        <div class="form-group">
+                                            <label for="functionhallPrice">Functionhall Price<span class="required">*</span></label>
+                                            <input type="text" name="functionhallPrice" class="form-control" formControlName="functionhallPrice"
+                                                [ngClass]="{'is-invalid':DetailsForm.get('functionhallPrice').touched && DetailsForm.get('functionhallPrice').invalid}" />
+                                            <div *ngIf="DetailsForm.get('functionhallPrice').touched && DetailsForm.get('functionhallPrice').invalid" class="invalid-feedback">
+                                                <div *ngIf="DetailsForm.get('functionhallPrice').errors.required">Function Hall Price is
+                                                    required</div>
+                                                <div *ngIf="DetailsForm.get('functionhallPrice').errors.functionhallPrice">Function Hall Price
+                                                    must be a
+                                                    valid</div>
+                                            </div>
+                                        </div>
+                                         <div class="form-group">
+                                            <label for="correlationId">Functionhall Price<span class="required">*</span></label>
+                                            <input type="text" name="correlationId" class="form-control" formControlName="correlationId"
+                                                [ngClass]="{'is-invalid':DetailsForm.get('correlationId').touched && DetailsForm.get('correlationId').invalid}" />
+                                            <div *ngIf="DetailsForm.get('correlationId').touched && DetailsForm.get('correlationId').invalid" class="invalid-feedback">
+                                                <div *ngIf="DetailsForm.get('correlationId').errors.required">correlationId  is
+                                                    required</div>
+                                                <div *ngIf="DetailsForm.get('correlationId').errors.correlationId">correlationId
+                                                    must be a
+                                                    valid</div>
+                                            </div>
+                                        </div>
+            
+                                        <!-- =================================================================================
+                                  AMENITIES CHECK BOXES
+            ================================================================================== -->
+            
+                                        <!-- <div class="form-row"> -->
+                                        <label for="">
+                                            <h3>Amenities<span class="required">*</span></h3>
+                                        </label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="parking" type="checkbox" value="parking"
+                                                id="parking" formControlName="parking"
+                                                [ngClass]="{'is-invalid':DetailsForm.get('parking').touched && DetailsForm.get('parking').invalid}" />
+                                            <div *ngIf="DetailsForm.get('parking').touched && DetailsForm.get('parking').invalid"
+                                                class="invalid-feedback">
+                                                <div *ngIf="DetailsForm.get('parking').errors.required">Parking is
+                                                    required</div>
+                                                <div *ngIf="DetailsForm.get('parking').errors.parking">Parking
+                                                    must be
+                                                    valid </div>
+                                            </div> &nbsp;
+                                            <label class="form-check-label" for="parking">
+                                                Parking
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="internet" type="checkbox" value="internet"
+                                                id="internet" formControlName="internet"
+                                                [ngClass]="{'is-invalid':DetailsForm.get('internet').touched && DetailsForm.get('internet').invalid}" />
+                                            <div *ngIf="DetailsForm.get('internet').touched && DetailsForm.get('internet').invalid"
+                                                class="invalid-feedback">
+                                                <div *ngIf="DetailsForm.get('internet').errors.required">Internet is
+                                                    required</div>
+                                                <div *ngIf="DetailsForm.get('internet').errors.internet">Internet
+                                                    must be
+                                                    valid </div>
+                                            </div>&nbsp;
+                                            <label class="form-check-label" for="internet">
+                                                Internet
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="nosmoking" type="checkbox" value="nosmoking"
+                                                id="nosmoking" formControlName="nosmoking"
+                                                [ngClass]="{'is-invalid':DetailsForm.get('nosmoking').touched && DetailsForm.get('nosmoking').invalid}" />
+                                            <div *ngIf="DetailsForm.get('nosmoking').touched && DetailsForm.get('nosmoking').invalid"
+                                                class="invalid-feedback">
+                                                <div *ngIf="DetailsForm.get('nosmoking').errors.required">No Smoking is
+                                                    required</div>
+                                                <div *ngIf="DetailsForm.get('nosmoking').errors.nosmoking">No Smoking
+                                                    must be
+                                                    valid </div>
+                                            </div>&nbsp;
+                                            <label class="form-check-label" for="nosmoking">
+                                                NoSmoking
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="airconditioning" type="checkbox"
+                                                value="airconditioning" id="airconditioning" formControlName="airconditioning"
+                                                [ngClass]="{'is-invalid':DetailsForm.get('airconditioning').touched && DetailsForm.get('airconditioning').invalid}" />
+                                            <div *ngIf="DetailsForm.get('airconditioning').touched && DetailsForm.get('airconditioning').invalid"
+                                                class="invalid-feedback">
+                                                <div *ngIf="DetailsForm.get('airconditioning').errors.required">Air Conditioning is
+                                                    required</div>
+                                                <div *ngIf="DetailsForm.get('airconditioning').errors.airconditioning">Air
+                                                    Conditioning
+                                                    must be
+                                                    valid </div>
+                                            </div>&nbsp;
+                                            <label class="form-check-label" for="airconditioning">
+                                                AirConditioning
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="soundsystem" type="checkbox" value="soundsystem"
+                                                id="soundsystem" formControlName="soundsystem"
+                                                [ngClass]="{'is-invalid':DetailsForm.get('soundsystem').touched && DetailsForm.get('soundsystem').invalid}" />
+                                            <div *ngIf="DetailsForm.get('soundsystem').touched && DetailsForm.get('soundsystem').invalid"
+                                                class="invalid-feedback">
+                                                <div *ngIf="DetailsForm.get('soundsystem').errors.required">Sound System is
+                                                    required</div>
+                                                <div *ngIf="DetailsForm.get('soundsystem').errors.soundsystem">Sound System
+                                                    must be
+                                                    valid </div>
+                                            </div>&nbsp;
+                                            <label class="form-check-label" for="soundsystem">
+                                                SoundSystem
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="lightingsystem" type="checkbox"
+                                                value="lightingsystem" id="lightingsystem" formControlName="lightingsystem"
+                                                [ngClass]="{'is-invalid':DetailsForm.get('lightingsystem').touched && DetailsForm.get('lightingsystem').invalid}" />
+                                            <div *ngIf="DetailsForm.get('lightingsystem').touched && DetailsForm.get('lightingsystem').invalid"
+                                                class="invalid-feedback">
+                                                <div *ngIf="DetailsForm.get('lightingsystem').errors.required">Lighting System is
+                                                    required</div>
+                                                <div *ngIf="DetailsForm.get('lightingsystem').errors.lightingsystem">Lighting System
+                                                    must be
+                                                    valid </div>
+                                            </div>&nbsp;
+                                            <label class="form-check-label" for="lightingsystem">
+                                                LightingSystem
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="dancefloor" type="checkbox" value="dancefloor"
+                                                id="dancefloor" formControlName="dancefloor"
+                                                [ngClass]="{'is-invalid':DetailsForm.get('dancefloor').touched && DetailsForm.get('dancefloor').invalid}" />
+                                            <div *ngIf="DetailsForm.get('dancefloor').touched && DetailsForm.get('dancefloor').invalid"
+                                                class="invalid-feedback">
+                                                <div *ngIf="DetailsForm.get('dancefloor').errors.required">Dance floor is
+                                                    required</div>
+                                                <div *ngIf="DetailsForm.get('dancefloor').errors.dancefloor">Dance floor
+                                                    must be
+                                                    valid </div>
+                                            </div>&nbsp;
+                                            <label class="form-check-label" for="dancefloor">
+                                                Dancefloor
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="noalcohol" type="checkbox" value="noalcohol"
+                                                id="noalcohol" formControlName="noalcohol"
+                                                [ngClass]="{'is-invalid':DetailsForm.get('noalcohol').touched && DetailsForm.get('noalcohol').invalid}" />
+                                            <div *ngIf="DetailsForm.get('noalcohol').touched && DetailsForm.get('noalcohol').invalid"
+                                                class="invalid-feedback">
+                                                <div *ngIf="DetailsForm.get('noalcohol').errors.required">No Alcohol is
+                                                    required</div>
+                                                <div *ngIf="DetailsForm.get('noalcohol').errors.noalcohol">No Alcohol
+                                                    must be
+                                                    valid </div>
+                                            </div>&nbsp;
+                                            <label class="form-check-label" for="noalcohol">
+                                                NoAlcohol
+                                            </label>
+                                        </div>
+                                        <!-- =================================================================================
+                                  EVENT TYPE CHECK BOXES
+            ================================================================================== -->
+            
+                                        <label for="">
+                                            <h3>Event Type<span class="required">*</span></h3>
+                                        </label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="banquethall" type="checkbox" value="banquethall"
+                                                id="banquethall" formControlName="banquethall"
+                                                [ngClass]="{'is-invalid':DetailsForm.get('banquethall').touched && DetailsForm.get('banquethall').invalid}" />
+                                            <div *ngIf="DetailsForm.get('banquethall').touched && DetailsForm.get('banquethall').invalid"
+                                                class="invalid-feedback">
+                                                <div *ngIf="DetailsForm.get('banquethall').errors.required">banquethall is
+                                                    required</div>
+                                                <div *ngIf="DetailsForm.get('banquethall').errors.banquethall">banquethall
+                                                    must be
+                                                    valid </div>
+                                            </div> &nbsp;
+                                            <label class="form-check-label" for="banquethall">
+                                                BanquetHall
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="partyroom" type="checkbox" value="partyroom"
+                                                id="partyroom" formControlName="partyroom"
+                                                [ngClass]="{'is-invalid':DetailsForm.get('partyroom').touched && DetailsForm.get('partyroom').invalid}" />
+                                            <div *ngIf="DetailsForm.get('partyroom').touched && DetailsForm.get('partyroom').invalid"
+                                                class="invalid-feedback">
+                                                <div *ngIf="DetailsForm.get('partyroom').errors.required">partyroom is
+                                                    required</div>
+                                                <div *ngIf="DetailsForm.get('partyroom').errors.partyroom">partyroom
+                                                    must be
+                                                    valid </div>
+                                            </div>&nbsp;
+                                            <label class="form-check-label" for="partyroom">
+                                                Partyroom
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="conference" type="checkbox" value="conference"
+                                                id="conference" formControlName="conference"
+                                                [ngClass]="{'is-invalid':DetailsForm.get('conference').touched && DetailsForm.get('conference').invalid}" />
+                                            <div *ngIf="DetailsForm.get('conference').touched && DetailsForm.get('conference').invalid"
+                                                class="invalid-feedback">
+                                                <div *ngIf="DetailsForm.get('conference').errors.required">conference is
+                                                    required</div>
+                                                <div *ngIf="DetailsForm.get('conference').errors.conference">conference
+                                                    must be
+                                                    valid </div>
+                                            </div>&nbsp;
+                                            <label class="form-check-label" for="conference">
+                                                Meeting / Conference
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="performance" type="checkbox" value="performance"
+                                                id="performance" formControlName="performance"
+                                                [ngClass]="{'is-invalid':DetailsForm.get('performance').touched && DetailsForm.get('performance').invalid}" />
+                                            <div *ngIf="DetailsForm.get('performance').touched && DetailsForm.get('performance').invalid"
+                                                class="invalid-feedback">
+                                                <div *ngIf="DetailsForm.get('performance').errors.required">performance is
+                                                    required</div>
+                                                <div *ngIf="DetailsForm.get('performance').errors.performance">performance
+                                                    must be
+                                                    valid </div>
+                                            </div>&nbsp;
+                                            <label class="form-check-label" for="performance">
+                                                Performance / Shows
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="weddinghall" type="checkbox" value="weddinghall"
+                                                id="weddinghall" formControlName="weddinghall"
+                                                [ngClass]="{'is-invalid':DetailsForm.get('weddinghall').touched && DetailsForm.get('weddinghall').invalid}" />
+                                            <div *ngIf="DetailsForm.get('weddinghall').touched && DetailsForm.get('weddinghall').invalid"
+                                                class="invalid-feedback">
+                                                <div *ngIf="DetailsForm.get('weddinghall').errors.required">weddinghall is
+                                                    required</div>
+                                                <div *ngIf="DetailsForm.get('weddinghall').errors.weddinghall">weddinghall
+                                                    must be
+                                                    valid </div>
+                                            </div>&nbsp;
+                                            <label class="form-check-label" for="weddinghall">
+                                                wedding hall
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="eventspace" type="checkbox" value="eventspace"
+                                                id="eventspace" formControlName="eventspace"
+                                                [ngClass]="{'is-invalid':DetailsForm.get('eventspace').touched && DetailsForm.get('eventspace').invalid}" />
+                                            <div *ngIf="DetailsForm.get('eventspace').touched && DetailsForm.get('eventspace').invalid"
+                                                class="invalid-feedback">
+                                                <div *ngIf="DetailsForm.get('eventspace').errors.required">Multi-purpose event space
+                                                    is
+                                                    required</div>
+                                                <div *ngIf="DetailsForm.get('eventspace').errors.eventspace">Multi-purpose event
+                                                    space
+                                                    must be
+                                                    valid </div>
+                                            </div>&nbsp;
+                                            <label class="form-check-label" for="eventspace">
+                                                Multi-purpose event space
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="nightclub" type="checkbox" value="nightclub"
+                                                id="nightclub" formControlName="nightclub"
+                                                [ngClass]="{'is-invalid':DetailsForm.get('nightclub').touched && DetailsForm.get('nightclub').invalid}" />
+                                            <div *ngIf="DetailsForm.get('nightclub').touched && DetailsForm.get('nightclub').invalid"
+                                                class="invalid-feedback">
+                                                <div *ngIf="DetailsForm.get('nightclub').errors.required">nightclub is
+                                                    required</div>
+                                                <div *ngIf="DetailsForm.get('nightclub').errors.Nightclub">nightclub
+                                                    must be
+                                                    valid
+                                                </div>
+                                            </div>&nbsp;
+                                            <label class="form-check-label" for="nightclub">
+                                                Nightclub / Bar
+                                            </label>
+                                        </div>
+                                        <hr>
+                                        <!-- =================================================================================
+                                   BACK AND NEXT BUTTONS
+            ================================================================================== -->
+                                        <span>
+                                            <button type="submit" class="btn btn-default" >Back</button>
+                                            <button type="submit" class="btn btn-warning pull-right "  data-toggle="tab" href="#tab-4"
+                                                (click)="Detailsonclick()">Next
+                                            </button>
+                                        </span>
+                                    </div>
+                                </form>
+                                <br>
+                            <br>
+                            </div>
+                            <!-- <form>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-warning" data-toggle="tab" href="#tab-1"
+                                        role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                                        style="width:40%">
+                                        <span class="sr-only">70% Complete</span>
+                                    </div>
+                                </div>
+                                <div class="section-title">
+                                    <h2>Details<span></span></h2>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <label for="name">Function Hall name<span style="color: red;"> *</span></label>
+                                        
+                                       <input type="text" class="form-control form-group" placeholder="Function Hall name">
+                                    </div>
+                                </div>
+                               
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <label for="Address" class="form-group"><b>Function Hall Description:</b></label>
+                                        <textarea class="form-control form-group" rows="5"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <label for="name">Function Hall Type<span style="color: red;"> *</span></label>
+                                        <select class="form-control form-group">
+                                            <option selected disabled>Select Function Hall Type</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <label for="name">Bride (or) Bridegroom Rooms<span style="color: red;"> *</span></label>
+                                        <select class="form-control form-group">
+                                            <option selected disabled>Select Rooms</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <label for="name">Maximum Guests<span style="color: red;"> *</span></label>
+                                        <select class="form-control form-group">
+                                            <option selected disabled>Maximum Guests</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <hr>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <button class="btn btn-default" data-toggle="tab" href="#tab-2">Back</button>
+                                        <button class="btn btn-warning pull-right" data-toggle="tab" href="#tab-4" >Next</button>
+                                    </div>
+                                </div>
+                            </form> -->
+                            
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-4">
+                        <div class="row">
+                            <form>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-warning" data-toggle="tab" href="#tab-1"
+                                        role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                        style="width:60%">
+                                        <span class="sr-only">70% Complete</span>
+                                    </div>
+                                </div>
+                                <div class="section-title">
+                                    <h2>Photos<span></span></h2>
+                                    <b>
+                                        <h2 class="title">Add <span>photos</span> of your <span>functionhalls</span></h2>
+                                    </b>
+                                    <p>Let guests see why they should pick your functionhalls with well-lit,
+                                        landscape-oriented photos of these areas they will be able to acess.
+                                    </p>
+                
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                
+                                        <label for="file" button type="file" name="file" class="btn btn-warning"
+                                            style=" margin-left: 200px; margin-top: 30px; border-radius: 40px;"><i class="fa fa-plus"
+                                                style="margin-right: 7px;"></i>Add photos</label>
+                                        <input type="file" id="file" name="file" multiple="" value="file" style="visibility:hidden;"
+                                            (change)="onFileChange($event)">
+                                            <div class="row" style="margin-left: 6px;">
+                                                <img *ngFor='let url of urls' [src]="url" height="120px" width="170px" style="margin: 3px;">
+                                            </div>
+                                
+                                        <b>
+                                            <p style="margin-top: 30px;">You need at least 6 photos</p>
+                                        </b>
+                                
+                                        <p>Photos must be JPEG or PNG format and at least 1024x683 pixels.</p>
+                                
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                            <hr>
+                                            <button class="btn btn-default" data-toggle="tab" href="#tab-3">Back</button>
+                                            <button class="btn btn-warning pull-right" data-toggle="tab" href="#tab-5"
+                                                (click)="PhotosonClick()">Next</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <br>
+                            <br>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-5">
+                        <div class="row">
+                            <form>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-warning" data-toggle="tab" href="#tab-1"
+                                        role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+                                        style="width:70%">
+                                        <span class="sr-only">70% Complete</span>
+                                    </div>
+                                </div>
+                                <div class="section-title">
+                                    <h2>Security<span></span></h2>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <div class="checklist-header-container xs">
+                                            <h3>Protect your account</h3>
+                                            <hr>
+                                        </div>
+                                        <p>Send a verification code to your phone to confirm your identity</p>
+                                        <p><strong>Choose the phone number you'd like to use.</strong></p>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control " placeholder="Phone Number">
+                                        </div>
+                                        
+                                        <h3>Verify Using</h3>
+                                        <div class="radio">
+                                            <label><input type="radio" name="optradio" checked>Text Message</label>
+                                          </div>
+                                          <div class="radio">
+                                            <label><input type="radio" name="optradio">Phone Call</label>
+                                          </div>
+                                        
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                            <hr>
+                                            <button class="btn btn-default" data-toggle="tab" href="#tab-4">Back</button>
+                                            <button class="btn btn-warning pull-right" data-toggle="tab" href="#tab-6" >Next</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </form>
+                            <br>
+                            <br>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-6">
+                        <div class="row">
+                            <form>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-warning" data-toggle="tab" href="#tab-1"
+                                        role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                        style="width:80%">
+                                        <span class="sr-only">70% Complete</span>
+                                    </div>
+                                </div>
+                                <div class="section-title">
+                                    <h2>Payment<span></span></h2>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <h3>Select an existing bank account or setup a new one</h3>
+                                        <hr>
+                                        <select class="form-control form-group">
+                                            <option selected disabled>Select State</option>
+                                        </select>
+                                        <p class="text-center">Or</p>
+                                        <button class="btn btn-default btn-block" data-toggle="modal" data-target="#Addbankdetails" >Add Your Bank Details</button>
+                                        <div id="Addbankdetails" class="modal fade" role="dialog">
+                                            <div class="modal-dialog">
+                                          
+                                              <!-- Modal content-->
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    <h4 class="modal-title">Provide Your Bank Details</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form [formGroup]="AccountdetailsForm" ngSubmit="bankDetailsonclick()">
+
+                                                        <div class="form-group ">
+                                                            <label for="accountNumber">Account Number<span class="required">*</span></label>
+                                                            <input type="text" id="accountNumber" class="form-control"
+                                                                formControlName="accountNumber" 
+                                                                maxlength="15" size="15" pattern="/\+91[0-9]{15}/" required
+                                                                [ngClass]="{'is-invalid':AccountdetailsForm.get('accountNumber').touched && AccountdetailsForm.get('accountNumber').invalid}" />
+                                                            <div *ngIf="AccountdetailsForm.get('accountNumber').touched && AccountdetailsForm.get('accountNumber').invalid"
+                                                                class="invalid-feedback">
+                                                                <div *ngIf="AccountdetailsForm.get('accountNumber').errors.required">
+                                                                    Account Number is required
+                                                                </div>
+                                                                <div *ngIf="AccountdetailsForm.get('accountNumber').errors.accountNumber">
+                                                                    Account Number must be a valid Account Number
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                            
+                            
+                                                        <div class="form-group ">
+                                                            <label for="accountName">Account Name<span class="required">*</span></label>
+                                                            <input type="text" id="accountName" class="form-control" formControlName="accountName"
+                                                                 
+                                                                [ngClass]="{'is-invalid':AccountdetailsForm.get('accountName').touched && AccountdetailsForm.get('accountName').invalid}" />
+                                                            <div *ngIf="AccountdetailsForm.get('accountName').touched && AccountdetailsForm.get('accountName').invalid"
+                                                                class="invalid-feedback">
+                                                                <div *ngIf="AccountdetailsForm.get('accountName').errors.required">Account Name is required
+                                                                </div>
+                                                                <div *ngIf="AccountdetailsForm.get('accountName').errors.accountName">Account Name must be a valid Name
+                                                                </div>
+                                                            </div>
+                            
+                                                        </div>
+                            
+                            
+                                                        <div class="form-group ">
+                                                            <label for="accountType"> Account Type<span class="required">*</span>
+                                                            </label>
+                            
+                                                            <select class="form-control" formControlName="accountType"
+                                                                name="accountType"  placeholder=" Account Type "
+                                                                [ngClass]="{'is-invalid':AccountdetailsForm.get('accountType').touched && AccountdetailsForm.get('accountType').invalid}">
+                            
+                                                                <option value="" disabled selected hidden> Select Account Type</option>
+                                                                <option> Current</option>
+                                                                <option>Savings</option>
+                                                            </select>
+                                                            <div *ngIf="AccountdetailsForm.get('accountType').touched && AccountdetailsForm.get('accountType').invalid"
+                                                            class="invalid-feedback">
+                                                            <div *ngIf="AccountdetailsForm.get('accountType').errors.required">Account Type is required
+                                                            </div>
+                                                            <div *ngIf="AccountdetailsForm.get('accountType').errors.accountType">Account Type must be a valid accountType
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                            
+                            
+                                                        <div class="form-group">
+                                                            <label for="bank"> Bank Name<span class="required">*</span></label>
+                                                            
+                            
+                                                            <select class="form-control" (change)="getBranches($event.target.value)"
+                                                                  placeholder=" Bank Name "
+                                                                formControlName="bank" name="bank" [ngClass]="{'is-invalid':AccountdetailsForm.get('bank').touched && AccountdetailsForm.get('bank').invalid}">
+                                                
+                                                                <option value="" disabled selected hidden>Select Bank</option>
+                                                                <option *ngFor="let data of bankInfo">
+                                                                    {{data}}
+                                                                </option>
+                            
+                                                            </select>
+                                                            <div *ngIf="AccountdetailsForm.get('bank').touched && AccountdetailsForm.get('bank').invalid"
+                                                                class="invalid-feedback">
+                                                                <div *ngIf="AccountdetailsForm.get('bank').errors.required">Bank Name is required
+                                                                </div>
+                                                                <div *ngIf="AccountdetailsForm.get('bank').errors.bank">Account Type must be a valid Bank Name
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="branch"> Bank Branch<span class="required">*</span></label>
+                                                         <select class="form-control" (change)="getIFSC($event.target.value)"
+                                                             placeholder=" Bank Branch " formControlName="branch"
+                                                            name="branch"  [ngClass]="{'is-invalid':AccountdetailsForm.get('branch').touched && AccountdetailsForm.get('branch').invalid}">
+                            
+                                                            <option value="" disabled selected hidden>Select Bank Branch</option>
+                                                            <option *ngFor="let data of bankbranchInfo">{{data}}</option>
+                                                         </select>
+                                                            <div *ngIf="AccountdetailsForm.get('branch').touched && AccountdetailsForm.get('branch').invalid"
+                                                                class="invalid-feedback">
+                                                                <div *ngIf="AccountdetailsForm.get('branch').errors.required">Bank Branch is
+                                                                    required
+                                                                </div>
+                                                                <div *ngIf="AccountdetailsForm.get('branch').errors.branch">Bank Branch must  be valid
+                                                                </div>
+                                                            </div>
+                            
+                                                           
+                                                        </div>
+                            
+                                                        <div class="form-group">
+                                                            <label for="ifsc"> IFSC Code<span class="required">*</span> </label>
+                            
+                                                            <select class="form-control"  placeholder=" Bank IFSC "
+                                                                formControlName="ifsc" name="ifsc">
+                                                                <option selected>Select Branch IFSC</option>
+                            
+                                                                <option *ngFor="let data of  bankbranchIfscInfo ">
+                                                                    {{data.ifsc}}
+                                                                </option>
+                                                            </select>
+                                                            <div *ngIf="AccountdetailsForm.get('ifsc').touched && AccountdetailsForm.get('ifsc').invalid"
+                                                            class="invalid-feedback">
+                                                            <div *ngIf="AccountdetailsForm.get('ifsc').errors.required">IFSC Code is
+                                                                required
+                                                            </div>
+                                                            <div *ngIf="AccountdetailsForm.get('ifsc').errors.ifsc">IFSC Code must  be valid
+                                                            </div>
+                                                         </div>
+                                                        </div>
+                            
+                                                        <div class="form-group ">
+                                                            <label for="panNumber">PAN Number (Optional) </label>
+                                                            <input type="text" id="panNumber" class="form-control" formControlName="panNumber"
+                                                                placeholder="PAN Number"  maxlength="10" size="10"
+                                                                pattern="^[A-Za-z]{5}[0-9]{4}[A-Za-z]$" 
+                                                                [ngClass]="{'is-invalid':AccountdetailsForm.get('panNumber').touched && AccountdetailsForm.get('panNumber').invalid}" />
+                                                        </div>
+                            
+                                                        <div class="form-group">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" id="gridCheck"
+                                                                    formControlName="Tandc"
+                                                                    [ngClass]="{'is-invalid':AccountdetailsForm.get('Tandc').touched && AccountdetailsForm.get('Tandc').invalid}">
+                                                                <div *ngIf="AccountdetailsForm.get('Tandc').touched && AccountdetailsForm.get('Tandc').invalid"
+                                                                    class="invalid-feedback">1
+                                                                    <div *ngIf="AccountdetailsForm.get('Tandc').errors.required">
+                                                                        Accept the terms and conditions
+                                                                    </div>
+                                                                </div>
+                            
+                                                                <label class="form-check-label" for="gridCheck" style="padding-left: 10px;">
+                                                                    I Agree to the terms and conditions
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <!-- <hr> -->
+                            <!-- =================================================================================
+                                                   BACK AND NEXT BUTTONS
+                            ================================================================================== -->
+                                                        <span>
+                                                           
+                                                        </span>
+                                                    </form>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <!-- <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-warning" data-dismiss="modal">save</button> -->
+                                                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal" >Back</button>
+                                                    <button type="button" class="btn btn btn-warning" style="margin-left: 390px;"
+                                                    data-dismiss="modal"  (click)="bankDetailsonclick()">save</button>
+                                                </div>
+                                            </div>
+                                            
+                                            </div>
+                                            </div>
+                                        <div class="checkbox form-group">
+                                            <label class="box"><input type="checkbox" > I hereby agree to the vedika agreement 
+                                            </label>
+                                        </div>
+                                        
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <hr>
+                                        <button class="btn btn-default" data-toggle="tab" href="#tab-5">Back</button>
+                                        <button class="btn btn-warning pull-right" data-toggle="tab" href="#tab-7">Next</button>
+                                    </div>
+                                </div>
+                           
+                            </form>
+                            <br>
+                            <br>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-7">
+                        <div class="row">
+                            <form>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-warning" data-toggle="tab" href="#tab-1"
+                                        role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                        style="width:100%">
+                                        <span class="sr-only">70% Complete</span>
+                                    </div>
+                                </div>
+                                <div class="section-title">
+                                    <h2>Publish<span></span></h2>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                                        <!-- <input type="text" class="form-control form-group"
+                                            placeholder="Catering Service name">
+                                        <label for="Address" class="form-group"><b>Address:</b></label>
+                                        <textarea class="form-control form-group" rows="5"></textarea>
+                                        <select class="form-control form-group">
+                                            <option selected disabled>Select State</option>
+                                        </select> -->
+                                        <p style="font-size: larger; font-weight: 500;">Hit Publish To Upload Your Halls Data</p>
+                                        <hr>
+                                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#staticBackdrop"
+                                            style="margin-left: 210px;" (click)="publishonClick()">
+                                            <b>Publish</b> 
+                                        </button>
+                                        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false"
+                                            tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="staticBackdropLabel"><b>Thank You</b></h5>
+                                                    </div>
+                    <!-- =================================================================================
+                                          CLOSE AND OKAY  BUTTONS
+                    ================================================================================== -->
+                                                    <div class="modal-body" style="color: #c94d05;">
+                                                        <p>You have successfully Uploaded FunctionHall Details.</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-warning" data-dismiss="modal"
+                                                            (click)="onclickokay()">Okay</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <br>
+                            <br>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

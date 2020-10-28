@@ -1,0 +1,94 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="site-header-logo__link flex-item" itemprop="url" title="Vedikas" href="#"> <img alt="vedikas logo"
+                    class="site-header-logo__img Header-BG img-responsive" itemprop="logo"
+                    src="./assets/Images/logo/lasttttt.png" alt="Vedikas"
+                    style="margin-top: 0px; float: left; height: 55px; width: 80px;">
+            </a>
+        </div>
+     
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown"
+                        style="margin-right: 20px; color: black; margin-top: 0px;" href="#"><i
+                            style="padding-right: 5px; color: #c94d05;" class="fa fa-user"></i><b>Login</b><span
+                            class="caret" style="color: black;"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a routerLink="/owner-login"> Owner Login</a></li>
+                        <li><a routerLink="/login">User Login</a></li>
+                    </ul>
+                </li>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown"
+                        style="margin-right: 20px; color: black; margin-top: 0px;" href="#"><i
+                            style="padding-right: 5px; color: #c94d05;" class="fa fa-question-circle"></i><b>Help</b><span
+                            class="caret" style="color: black;"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a routerLink="/help"> Owner help</a></li>
+                        <li><a routerLink="/help">User help</a></li>
+                    </ul>
+                </li>
+                
+                <button class=" btn btn-primary" type="button" (click)="onclick()"
+                    style="margin-right: 20px;">List Your
+                        Venue</button>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<div class="background-img">  
+    <img src="../../../../assets/Images/image121.jpg" alt="" class="hero-img">
+    <div class="container" style="top: 50%; left: 43%; transform: translate(-50%, -50%);">
+        <h1 class="HeadLine__text" >
+            Discover The Perfect Place For
+            <br>
+            <span class="HeadLine__text">A Great Occasion</span></h1>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-4">
+                            <input type="search" name="" id="" class="form-control form-group" [(ngModel)]="query" name="query" placeholder="Search by location or functionHall name ">
+                            
+                        </div>
+                        <div class="col-md-2">
+                            <input type="date" name="" id="" class="form-control form-group">
+                        </div>
+                        <div class="col-md-2">
+                                <select class="form-control form-group" id="sel1">
+                                    <option selected disabled>Time Slot</option>
+                                    <option>4am To 4pm</option>
+                                    <option>4pm To 4am</option>
+                                    <option>Full Day</option>
+                                </select>
+                        </div>
+                        <div class="col-md-2">
+                            <!-- <i class="fa fa-user icon" style="position: absolute;"></i>  -->
+                            <input type="text" name="" id="" class="form-control form-group" placeholder="No.of Guests">
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-warning btn-block text-center" (click)="findFunctionhallByNameAndCity()">
+                                <span class="glyphicon glyphicon-search" style="font-size: 17px; margin-right: 5%; stroke-width: 1.5;"></span>Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </div>
+</div>
+
+<app-carousel></app-carousel>
+<app-regional-wedding></app-regional-wedding>
+<app-gardens></app-gardens>
+<app-footer></app-footer>
+<br>

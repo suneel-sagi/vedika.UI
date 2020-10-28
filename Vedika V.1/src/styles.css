@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+.form-control:focus {
+    border-color: #cc5510de;
+  }
+  .form-group{
+    font-weight: 400;
+    font-family: "Lato","Noto Sans JP","Noto Sans KR","Lucida Grande","Segoe UI","Tahoma","-apple-system","Roboto",sans-serif;
+  }
+  p {
+    font-weight: 400;
+    font-family: "Lato","Noto Sans JP","Noto Sans KR","Lucida Grande","Segoe UI","Tahoma","-apple-system","Roboto",sans-serif;
+  }
+
+  .btn-warning{
+    background-color: #cc5510de;
+    border-color: #cc5510de;
+  }
+  .btn-warning:hover{
+    background-color: #c94d05;
+    border-color: #cc5510de;
+
+  }
+  .btn-warning[disabled]{
+    background-color: #cc5510de;
+    border-color: #cc5510de;
+  }
+  .btn-warning[disabled]:hover{
+    background-color: #cc5510de;
+    border-color: #cc5510de;
+  }

@@ -1,0 +1,80 @@
+body {
+    font-family: "Poppins", sans-serif;
+    color: #444444;
+  }
+  h1, h2,  h4, h5, h6 {
+    font-family: "Satisfy", sans-serif;
+  }
+
+.hvr-grow1{
+    height: 200px;
+    width: 100%;
+    transform: perspective(1px) translateZ(-1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.911);
+    transition-duration: 0.8s;
+    transition-property: transform;
+    box-sizing: border-box;  
+    align-items: center;
+    justify-content: center;
+}
+@media only screen and (max-width: 800px){
+  .hvr-grow1{
+    height: 200px;
+    width: 100%;
+  }
+}
+.thumbnail{
+  overflow: hidden;
+  border-color: #c94d05;
+}
+.hvr-grow1:hover, .hvr-grow1:focus, .hvr-grow1:active {
+    transform: scale(1.2);
+  }
+.inner{
+  overflow: hidden;
+}
+.container{
+  margin-top: 5%;
+}
+.section-title {
+    text-align: center;
+    padding-bottom: 60px;
+  }
+  .flickity-prev-next-button .flickity-button-icon {
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    width: 60%;
+    height: 60%;
+    color: rgb(201, 77, 5);
+}
+  .section-title h2 {
+    margin: 15px 0 0 0;
+    font-size: 32px;
+    font-weight: 700;
+    color: #5f5950;
+  }
+  
+  .section-title h2 span {
+    color: #c94d05;
+  }
+  
+  .section-title p {
+    margin: 15px auto 0 auto;
+    font-weight: 400;
+    font-family: "Lato","Noto Sans JP","Noto Sans KR","Lucida Grande","Segoe UI","Tahoma","-apple-system","Roboto",sans-serif;
+  }
+  @media (min-width: 1024px) {
+    .section-title p {
+      width: 50%;
+    }
+  }
+  /* .btn-warning{
+    background-color: #ffb03b;
+  } */
+  .btn-warning{
+    background-color: #cc5510de;
+  }
+  .btn-warning:hover{
+    background-color: #c94d05;
+  }

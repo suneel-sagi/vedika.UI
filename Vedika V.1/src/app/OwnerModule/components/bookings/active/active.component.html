@@ -1,0 +1,53 @@
+
+<!-- <nav class="navbar navbar-white bg-white">
+  <a class="navbar-brand">
+      <img src=".\assets\Images\ProjectName.png" alt="Vedikas" style="width: 160px;">
+  </a>
+</nav>
+<br> -->
+
+   <!-- <nav class="navbar navbar-default">
+  <div class="container-fluid">
+          <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+       
+        <li><a [routerLink]="['../active/']">Active</a><br><br></li>
+      <li><a [routerLink]="['../recentbookings/']">Recent Bookings</a><br><br></li>
+      </ul>
+     
+    </div>
+  </div>
+</nav> -->
+
+<h2> <b>Active bookings</b> </h2>
+<BR>
+<div class="container">
+
+
+
+<table style="width:50%">
+  <tr>
+    <th>BookingId</th>
+    <th>Function Hall-Id</th>
+    <th>Function Hall Price</th>
+    <th>Date</th>
+    <th>Time Slot</th>
+    <th>Name</th>
+    <th>Maximumguest</th>
+    <th>Functionhalltype</th>
+    <th>Amount</th>
+  
+  </tr>
+
+  <tr *ngFor="let data of httpData">
+    <td>{{data.bookingId}}</td>
+    <td>{{data.functionhallId}}</td>
+    <td>{{data.functionhallPrice}}</td>
+    <td>{{data.timeSlot}}</td>
+    <td> {{data.name}}</td>
+    <td>{{data.maximumguest}}</td>
+    <td>{{data.functionhalltype}}</td>
+   </tr>
+</table> 
+
+

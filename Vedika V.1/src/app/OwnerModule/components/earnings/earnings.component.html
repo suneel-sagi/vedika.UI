@@ -1,0 +1,90 @@
+
+<nav class="navbar navbar-white bg-white">
+  <a class="navbar-brand">
+      <img src="./assets/Images/ProjectName.png" alt="Vedikas" style="width: 160px;">
+  </a>
+</nav>
+<br>
+
+
+<h2> <b>My Earnings</b> </h2>
+<BR>
+<div class="container">
+  <div class="col-md-6">
+
+   
+        <div class="row">
+                <form  action="/action_page.php">
+                  <label> From:</label>
+                  <input class="date" type="date" id="From" name="From">
+                  <label>To:</label>
+                  <input type="date" id="To" name="To">
+                  <input type="submit"  value="Submit">
+                </form>
+         
+     
+
+
+ 
+      <table style="width:50%">
+            <tr>
+                <th>S.no</th>
+        
+           <th>Venue Name</th>
+            <th>Month</th>
+           <th>Year</th>
+
+                <th>Total Earnings</th>
+               </tr>
+
+           <tr>
+          <td>1</td>
+         
+            <td>Anr </td>
+            <td>January</td>
+            <td>2020</td>
+          
+            <td>96000</td>
+              </tr>
+
+             <tr>
+          <td>2</td>
+    
+          <td>SPG Grand </td>
+          <td>February</td>
+          <td>2020</td>
+      
+         <td>106000</td>
+            </tr>
+            <tr>
+                <td>3</td>
+     
+              <td>SNR Gardens </td>
+              <td>March</td>
+              <td>2020</td>
+              
+                <td>86000</td>
+                    </tr>
+       </table> 
+            </div>
+ </div>
+
+<div class="col-md-6">
+  <div class="row">
+   
+
+    <div id="chart">
+      <apx-chart
+        [series]="chartOptions.series"
+        [chart]="chartOptions.chart"
+        [xaxis]="chartOptions.xaxis"
+     
+        [dataLabels]="chartOptions.dataLabels"
+        [grid]="chartOptions.grid"
+        [stroke]="chartOptions.stroke"
+        [title]="chartOptions.title"
+      ></apx-chart>
+    </div>
+    
+     </div>
+ </div>
